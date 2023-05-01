@@ -1,0 +1,28 @@
+#bookContent{
+    width: 110px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px 20px;
+    border: solid 3px #89b6c9;
+    border-radius: 10px;
+}
+.capaLivro{
+    width: 70px;
+}
+#rating{
+    width: 100%;
+    margin: 0;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.star{
+    width: 15px;
+    padding: 0;
+    color: rgb(216, 219, 0);
+}
