@@ -1,0 +1,27 @@
+#reviewContainer{
+    display: flex;
+    width: 45%;
+    height: 200px;
+    margin: 10px 20px;
+    background-color: #89b6c9;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #dcd1eb;
+}
+#title{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding-left: 0;
+    padding-top: 20px;
+    font-size: 20px;
+}
+#titleBookCase{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+#contentReview{
+    display: flex;
+    font-size: 13px;
+}

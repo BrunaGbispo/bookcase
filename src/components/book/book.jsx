@@ -1,17 +1,17 @@
 import React from "react";
-import BookStyle from "./book.css";
-import { AiFillStar } from "react-icons/ai";
+import "./book.css";
+import { TiStar, TiStarOutline } from "react-icons/ti";
 
 function Book (props){
     return(
         <div id="bookContent">
             <div><img  className="capaLivro"src={props.capa} alt={props.alt}/></div>
             <span id="rating">
-                <AiFillStar className="star"/>
-                <AiFillStar className="star"/>
-                <AiFillStar className="star"/>
-                <AiFillStar className="star"/>
-                <AiFillStar className="star"/>
+            {props.nota > 0 ? <TiStar />:<TiStarOutline />}
+            {props.nota > 1 ? <TiStar />:<TiStarOutline />}
+            {props.nota > 2 ? <TiStar />:<TiStarOutline />}
+            {props.nota > 3 ? <TiStar />:<TiStarOutline />}
+            {props.nota > 4 ? <TiStar />:<TiStarOutline />}
             </span>
         </div>
     )

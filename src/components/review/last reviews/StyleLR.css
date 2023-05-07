@@ -1,0 +1,13 @@
+.lastReviews{
+    width: 100%;
+}
+#reviewCard{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+#titleLastReviews{
+    width: 100%;
+    text-align: center;
+}

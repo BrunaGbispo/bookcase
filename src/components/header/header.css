@@ -2,6 +2,7 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
+    background-color: #dcd1eb;
 }
 #profilePhoto{
     width: 5%;
@@ -27,7 +28,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #8A1800;
+    color: #460464;
 }
 
 h2 , h3{

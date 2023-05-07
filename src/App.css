@@ -1,23 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap');
 
 body{
-    color: #344034;
+    color: #460464;
     font-family: "Inter";
-    background-color: rgb(235, 248, 248);
+    background-color: #d6e1e6;
 }
 
-main{
+.mainContent    {
     display: flex;
     flex-direction: row;
 }
-#titleLastReviews{
-    width: 100%;
-    font-size: 35px;
-    text-align: center;
-}
-#reviewCard{
-    height: 350px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+hr{
+    margin: 0;
 }

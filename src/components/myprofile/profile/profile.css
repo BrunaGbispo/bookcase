@@ -1,0 +1,23 @@
+#sectionProfile{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+}
+#navProfile{
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.listProfile{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.btnNav{
+    width: 40%;
+    text-align: center;
+}

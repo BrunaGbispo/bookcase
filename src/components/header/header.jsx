@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderStyle from "./header.css";
+import "./header.css";
 import FotoPerfil from "../images/foto_perfil.jpg"
 
 function Header(props) {
@@ -8,7 +8,7 @@ function Header(props) {
             <img id="profilePhoto" src={FotoPerfil} alt="foto de perfil do úsuario" />
             <h1>Bruna Bispo</h1>
             <span className="mystatistics">
-                <h2>{props.qtdLida}</h2>
+                <h2>{props.contagem}</h2>
                 <h3>lidos</h3>
             </span>
             <span className="mystatistics">

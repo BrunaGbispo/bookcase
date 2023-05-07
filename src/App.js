@@ -1,30 +1,37 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
 import Header from './components/header/header';
-import Sidebar from './components/sidebar/sidebar';
+import { Sidebar } from './components/sidebar/sidebar';
 import BookCase from './components/bookcase/bookcase';
 import Review from './components/review/review';
-import InstrumentosMortais from "../src/components/images/capa_instrumentos_mortais.jpg";
-import AGarotaDoLago from "../src/components/images/capa-a-garota-do-lago.jpg";
+import React, { useState } from 'react';
+import { CountContext } from './context/CountContext';
+import Explorer from './components/explorer/explorer';
+import Desejados from './components/mywishes/mywishes';
+import Profile from './components/myprofile/profile/profile';
 
 function App() {
+  const [contagemLidos, setContagem] = useState(0)
   return (
     <div className="App">
-      <header className="App-header">
-        <Header qtdLida="130" queroLer="60"/>
-      </header>
-      <hr/>
-      <main>
-        <Sidebar/>
-        <BookCase/>
-      </main>
-      <section id="lastReviews">
-        <h1 id="titleLastReviews">Últimas Avaliações</h1>
-        <div id="reviewCard">
-          <Review  capa={InstrumentosMortais} alt="capa do livro instrumentos mortais vol 6" titlereview="O melhor livro da saga!" review="Sem duvidas o melhor livro da saga!!! A historia te prende desde o primeiro capitulo e acaba com um final extremamente emocionante. Nota 100000"/>
-          <Review  capa={AGarotaDoLago} alt="capa do livro a garota do lago" titlereview="Me tirou da ressaca literária!" review="QUE LIVRO INCRÍVEL! Havia meses que não conseguia engatar em uma leitura, mas este livro me pegou de tal maneira que terminei em 7 dias. História intrigante do inicio ao fim, muitas reviravoltas, tensão, romance, enfim... PERFEITO. Espero um dia encontrar outro livro a altura deste."/>
-        </div>
-      </section>
-
+      <Router>
+        <CountContext.Provider value={{ contagemLidos, setContagem }}>
+          <header className="App-header">
+            <Header contagem={contagemLidos} queroLer='30' />
+          </header>
+          <hr />
+          <div className='mainContent'>
+              <Sidebar />
+            <Routes>
+              <Route path='/' element={<BookCase />} />
+              <Route path='/explorer' element={<Explorer />} />
+              <Route path='/wishes' element={<Desejados />} />
+              <Route path='/review' element={<Review />} />
+              <Route path='/myProfile' element={<Profile />} />
+            </Routes>
+          </div>
+        </CountContext.Provider>
+      </Router>
     </div>
   );
 }
