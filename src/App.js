@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/header/header';
 import { Sidebar } from './components/sidebar/sidebar';
 import BookCase from './components/bookcase/bookcase';
