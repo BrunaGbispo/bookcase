@@ -9,10 +9,11 @@ input{
     height: 30px;
     margin: 10px 10px 40px 10px;
     padding-left: 20px;
-    border: 2px solid #460464;
+    border: 2px solid #8b3fad;
     border-radius: 30px;
     background-color: #dcd1eb;
 }
+/** mudei a cor do "border" era: #460464**/
 .subtitle{
     width: 100%;
     padding-left: 60px;
